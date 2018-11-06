@@ -16,7 +16,7 @@ export default {
     Todo,
   },
   methods: {
-      completeTodo(todo) {
+    completeTodo(todo) {
       const todoIndex = this.todos.indexOf(todo);
       this.todos[todoIndex].done = true;
     },

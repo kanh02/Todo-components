@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <todo-list v-bind:todos="todos"></todo-list>
-    <create-todo v-on:add-todo="addTodo">
+    <create-todo v-on:add-todo="addTodo"/>
 </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
   name: 'App',
   components: {
     TodoList,
-    Todo,
     CreateTodo,
   },
   methods: {
@@ -23,6 +22,7 @@ export default {
         title,
         done: false,
       });
+      console.log(this.todos)
     },
   },
   data(){
